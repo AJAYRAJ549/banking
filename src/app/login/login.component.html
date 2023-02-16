@@ -1,17 +1,23 @@
-<h2 style="color: rgba(210, 201, 216, 0.74);">{{data}}</h2>
+<h2 style="color: rgba(137, 32, 207, 0.74);">{{data}}</h2>
 
 
 <div class="container w-50 rounded border-white text-center p-5 mt-5" style="background-color: rgba(0, 0, 0, 0.397);">
 <h1 style="color:wheat;">Sign In To Your Bank Account</h1>
-<form action="">
+<form action="" (ngSubmit)="login()">
     <div class="p-3 mt-2">
-        <input (change)="acnoChange($event)" id="acid" name="acnum1" class="form-control" type="text" [placeholder]=inputplaceholder>
+        <input [(ngModel)]="acno" id="acid" name="acnum1" class="form-control" type="text" [placeholder]=inputplaceholder>
     </div>
     <div class="p-3 mt-2">
-        <input (change)="pswrdChange($event)" id="psw1" name="paswrd1" class="form-control" type="text" placeholder="Password">
+        <input [(ngModel)]="psw" id="psw1" name="paswrd1" class="form-control" type="text" placeholder="Password">
     </div>
     <div class="p-3 mt-2">
-        <button type="button" (click)="login()" class="btn btn-outline-light">Login</button>
+        <button type="submit" class="btn btn-outline-light">Login</button>
+    </div>
+    <div class="text-center text-white">
+       <strong>Not Registered ?</strong>
+        <a style="text-decoration: none; color:yellow" routerLink="register">
+            <strong>register</strong>
+        </a>
     </div>
 </form>
 </div>

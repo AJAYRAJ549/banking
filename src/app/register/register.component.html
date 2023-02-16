@@ -1,0 +1,25 @@
+<div class="container w-50 rounded border-white text-center p-5 mt-5" style="background-color: rgba(0, 0, 0, 0.397);">
+    <h1 style="color:wheat;">Sign Up To Bank</h1>
+    <form action="">
+
+        <div class="p-3 mt-2">
+             <input [(ngModel)]="uname" id="unamid" name="usern1" class="form-control" type="text" 
+         placeholder= "Enter Username">
+        </div>
+
+        <div class="p-3 mt-2">
+            <input [(ngModel)]="acno" id="acid" name="acnum1" class="form-control" type="text" 
+             placeholder= "Enter acnum">
+        </div>
+
+        <div class="p-3 mt-2">
+            <input [(ngModel)]="psw" id="psw1"  name="paswrd1" class="form-control" type="password" 
+             placeholder=" Enter Password">
+        </div>
+
+        <div class="p-3 mt-2">
+            <button type="button" (click)="register()" class="btn btn-outline-warning">register</button>
+        </div>
+       
+    </form>
+</div>
