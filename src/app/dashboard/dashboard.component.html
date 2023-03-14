@@ -1,3 +1,8 @@
+<div class="text-end pt-4 pe-4">
+<button class="btn btn-danger">Delete Account</button>
+<button class="btn btn-warning ms-2">Logout</button>
+</div>
+
 <h1>Welcome {{user}}</h1>
 
 <div class="mt-3 p-2 w-25 container text-center border border-dark rounded-pill" style="background-color:rgb(88, 100, 117);">
@@ -11,18 +16,18 @@
             style="background-color: rgba(0, 0, 0, 0.397);">
 
           <h1 class="text-white">Deposit</h1>
-          <form action="">
+          <form action="" [formGroup]="depositForm">
 
             <div class="p-3 mt-2">
-                <input [(ngModel)]="acno" id="acid" name="acnum1" class="form-control" type="text" placeholder="Enter acnum">
+                <input formControlName="acno" id="acid" name="acnum1" class="form-control" type="text" placeholder="Enter acnum">
             </div>
 
             <div class="p-3 mt-2">
-                <input [(ngModel)]="psw" id="psw1" name="paswrd1" class="form-control" type="text" placeholder="Enter Password">
+                <input formControlName="psw" id="psw1" name="paswrd1" class="form-control" type="text" placeholder="Enter Password">
             </div>
 
             <div class="p-3 mt-2">
-                <input [(ngModel)]="amnt" id="amouid" name="amnt1" class="form-control" type="password" placeholder=" Amount">
+                <input formControlName="amnt" id="amouid" name="amnt1" class="form-control" type="password" placeholder=" Amount">
             </div>
 
             <div class="p-3 mt-2">
@@ -38,18 +43,18 @@
     <div class="container w-75 rounded border-white text-center p-5 mt-2"
         style="background-color: rgba(0, 0, 0, 0.397);">
     <h1 class="text-white">Withdraw</h1>
-    <form action="">
+    <form action="" [formGroup]="withdrawForm">
 
         <div class="p-3 mt-2">
-            <input [(ngModel)]="acno1" id="acid2" name="acnum2" class="form-control" type="text" placeholder="Enter acnum">
+            <input formControlName="acno1" id="acid2" name="acnum2" class="form-control" type="text" placeholder="Enter acnum">
         </div>
 
         <div class="p-3 mt-2">
-            <input [(ngModel)]="psw1" id="psw2" name="paswrd2" class="form-control" type="text" placeholder="Enter Password">
+            <input formControlName="psw1" id="psw2" name="paswrd2" class="form-control" type="text" placeholder="Enter Password">
         </div>
 
         <div class="p-3 mt-2">
-            <input [(ngModel)]="amnt1" id="amouid1" name="amnt2" class="form-control" type="password" placeholder=" Amount">
+            <input formControlName="amnt1" id="amouid1" name="amnt2" class="form-control" type="password" placeholder=" Amount">
         </div>
 
         <div class="p-3 mt-2">
