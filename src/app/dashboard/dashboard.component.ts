@@ -12,6 +12,7 @@ export class DashboardComponent implements OnInit {
 
 user:any
 acno:any
+datedetails:any
 
 // acno:any
 // psw:any
@@ -21,8 +22,16 @@ acno:any
 // psw1:any
 // amnt1:any
 
+
+
+
+
 constructor(private ds:DataService,private fb:FormBuilder,private router:Router) { 
 this.user=this.ds.currentUser
+
+// access date
+this.datedetails=new Date()
+
 }
 
 depositForm=this.fb.group({
@@ -93,6 +102,10 @@ logout(){
 
 deleteParent(){
  this.acno=JSON.parse(localStorage.getItem("currentAcno") || "")
+}
+
+cancel(){
+  this.acno=''
 }
 
 }
